@@ -12,7 +12,9 @@ A browser-based survival game where **Terraform controls the difficulty**. Demon
 
 ## 🎮 Play Now
 
-**Live Demo:** https://mark-siazon.github.io/acads-Terraform_Survivor-ELEC3/
+**Live Demo:** https://mark-siazon.github.io/AE3-Terraform_Survivor/
+
+**Author portfolio:** https://www.marksiazon.dev/
 
 ## 🚀 Quick Start
 

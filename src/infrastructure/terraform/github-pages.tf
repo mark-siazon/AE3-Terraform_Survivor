@@ -17,12 +17,12 @@ output "github_pages_instructions" {
        git push origin main
     
     3. Enable GitHub Pages (if not already enabled):
-       - Go to: https://github.com/mark-siazon/acads-Terraform_Survivor-ELEC5/settings/pages
+       - Go to: https://github.com/mark-siazon/AE3-Terraform_Survivor/settings/pages
        - Set Source: Branch 'main', Folder '/src/frontend'
        - Click Save
     
     4. Your game will be live at:
-       https://mark-siazon.github.io/acads-Terraform_Survivor-ELEC5/
+       https://mark-siazon.github.io/AE3-Terraform_Survivor/
     
     Game Settings Applied:
     - Environment: ${var.environment}

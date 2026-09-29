@@ -1,6 +1,6 @@
 output "deployment_url" {
   description = "URL of the deployed game on GitHub Pages"
-  value       = "https://mark-siazon.github.io/acads-Terraform_Survivor-ELEC5/"
+  value       = "https://mark-siazon.github.io/AE3-Terraform_Survivor/"
 }
 
 output "environment" {

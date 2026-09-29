@@ -5,7 +5,7 @@ This project uses Terraform to configure game difficulty and settings for GitHub
 ## ✅ Setup Complete
 
 Your game is configured with Terraform and deployed to:
-**https://mark-siazon.github.io/acads-Terraform_Survivor-ELEC5/**
+**https://mark-siazon.github.io/AE3-Terraform_Survivor/**
 
 ## 🎮 How It Works
 
@@ -136,13 +136,13 @@ After running `terraform apply`, you'll see:
 
 4. **Enable GitHub Pages** (first time only):
 
-   - Go to: https://github.com/mark-siazon/acads-Terraform_Survivor-ELEC5/settings/pages
+   - Go to: https://github.com/mark-siazon/AE3-Terraform_Survivor/settings/pages
    - Set Source: Branch `main`, Folder `/src/frontend`
    - Click Save
 
 5. **Play Your Game**:
    - Wait 1-2 minutes for GitHub Pages to deploy
-   - Visit: https://mark-siazon.github.io/acads-Terraform_Survivor-ELEC5/
+   - Visit: https://mark-siazon.github.io/AE3-Terraform_Survivor/
 
 ## 🎓 Why Use Terraform?
 
