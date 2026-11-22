@@ -220,8 +220,8 @@ terraform apply -var="vercel_api_token=TOKEN"
 ### 3. Local Development
 
 ```bash
-python -m http.server 8000
-# Open: localhost:8000/src/frontend/
+python run-game.py
+# Open: http://127.0.0.1:8000/standalone.html
 ```
 
 ### 4. Standalone

@@ -5,43 +5,28 @@ Serves files with proper MIME types for ES6 modules.
 
 Usage:
     python server.py
-    
+
 Then open: http://localhost:8000
 """
 
-import http.server
-import socketserver
-import os
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from local_game_server import HOST, create_server
 
 PORT = 8000
 
-class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
-    def end_headers(self):
-        # Add CORS headers for local development
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET')
-        self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
-        super().end_headers()
-
-    def guess_type(self, path):
-        # Ensure .js files are served with correct MIME type
-        if path.endswith('.js'):
-            return 'application/javascript'
-        return super().guess_type(path)
-
 if __name__ == '__main__':
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    
-    with socketserver.TCPServer(("", PORT), MyHTTPRequestHandler) as httpd:
+    with create_server(PORT) as httpd:
         print(f"🚀 Terraform Survivor Server")
-        print(f"📡 Serving at: http://localhost:{PORT}")
-        print(f"📂 Directory: {os.getcwd()}")
+        print(f"📡 Serving at: http://{HOST}:{PORT}")
+        print("📂 Serving public src/frontend assets only")
         print(f"\n🎮 Open these URLs:")
-        print(f"   Modular version:    http://localhost:{PORT}/index.html")
-        print(f"   Standalone version: http://localhost:{PORT}/standalone.html")
-        print(f"   Test page:          http://localhost:{PORT}/test.html")
+        print(f"   Game entry:         http://{HOST}:{PORT}/index.html")
+        print(f"   Standalone version: http://{HOST}:{PORT}/standalone.html")
         print(f"\n⏹️  Press Ctrl+C to stop\n")
-        
+
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

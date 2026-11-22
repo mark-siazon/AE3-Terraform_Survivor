@@ -21,11 +21,19 @@ A browser-based survival game where **Terraform controls the difficulty**. Demon
 ```bash
 # Play locally (easiest)
 python run-game.py
-# Opens browser automatically at http://localhost:8000/src/frontend/standalone.html
+# Opens browser automatically at http://127.0.0.1:8000/standalone.html
 
 # Or open directly (no server)
 open src/frontend/standalone.html
 ```
+
+Both Python launchers bind only `127.0.0.1` and serve `src/frontend`, not the
+repository root. Hidden paths, parent traversal, out-of-root symlinks, directory
+listings, and non-public file types are denied. Wildcard CORS is not enabled.
+Older `/src/frontend/…` game links remain supported. Do not expose these local
+development helpers through a tunnel or reverse proxy.
+
+Run the isolated HTTP security regressions with `python -B -m unittest discover -s tests`.
 
 ## 🏗️ Terraform Implementation
 
