@@ -78,8 +78,8 @@ Adjust in real-time (press **O**):
 
 ```bash
 # Play locally
-python -m http.server 8000
-# Open: http://localhost:8000/src/frontend/
+python run-game.py
+# Open: http://127.0.0.1:8000/standalone.html
 
 # Or use standalone
 # Just open: src/frontend/standalone.html

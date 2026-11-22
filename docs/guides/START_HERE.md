@@ -24,8 +24,8 @@ This version has all JavaScript inlined and works without a server!
 # Recommended: Use the game launcher
 python run-game.py
 
-# Or use Python's built-in server
-python -m http.server 8000
+# Or serve only the public game files on loopback
+python -m http.server 8000 --bind 127.0.0.1 --directory src/frontend
 ```
 
 Then open: **http://localhost:8000**
@@ -37,7 +37,7 @@ Then open: **http://localhost:8000**
 npm install -g http-server
 
 # Run server
-http-server -p 8000
+http-server src/frontend -a 127.0.0.1 -p 8000
 ```
 
 Then open: **http://localhost:8000**
